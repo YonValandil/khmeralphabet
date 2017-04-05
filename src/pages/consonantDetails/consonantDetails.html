@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Consonnes Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Details de la consonnes</h2>
+
+  <div *ngIf="letter && type" id="consonant-details-content">
+    <p>lettre : {{ letter }}</p>
+    <p>type : {{ (type == 0) ? 'Soft' : 'Dur' }}</p>
+  </div>
+
+  <div *ngIf="!letter || !type" id="consonant-details-content-error">
+    <p>Pas de données sur cette lettre..</p>
+  </div>
+</ion-content>

@@ -15,7 +15,6 @@ export class HomePage {
   }
 
   private showConsonantsPage() {
-    console.log("It works, Function Called !");
     this.navCtrl.push(ConsonantsPage);
   }
 

@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/home/home';
 import { ConsonantsPage } from '../pages/consonants/consonants';
+import { consonantDetailsPage } from '../pages/consonantDetails/consonantDetails';
 import { SettingsPage } from '../pages/settings/settings';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
@@ -16,6 +17,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ConsonantsPage,
+    consonantDetailsPage,
     SettingsPage,
     Page1,
     Page2
@@ -28,6 +30,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ConsonantsPage,
+    consonantDetailsPage,
     SettingsPage,
     Page1,
     Page2

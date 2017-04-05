@@ -8,5 +8,15 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-item>
+     <ion-label color="primary">letter</ion-label>
+     <ion-input [(ngModel)]="letter" placeholder="Text Input"></ion-input>
+   </ion-item>
 
+   <ion-item>
+      <ion-label color="primary">type</ion-label>
+      <ion-input [(ngModel)]="type" placeholder="Text Input"></ion-input>
+    </ion-item>
+
+  <button id="consonantDetailsButton" ion-button color="light" (tap)="showConsonantDetailsPage()">Light</button>
 </ion-content>
