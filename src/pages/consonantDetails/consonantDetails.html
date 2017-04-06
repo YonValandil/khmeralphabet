@@ -10,12 +10,12 @@
 <ion-content padding>
   <h2>Details de la consonnes</h2>
 
-  <div *ngIf="letter && type" id="consonant-details-content">
-    <p>lettre : {{ letter }}</p>
-    <p>type : {{ (type == 0) ? 'Soft' : 'Dur' }}</p>
+  <div *ngIf="name && type" id="consonant-details-content">
+    <p>lettre : {{ name }}</p>
+    <p>type : {{ (type == 1) ? 'Dur' : 'Soft' }}</p>
   </div>
 
-  <div *ngIf="!letter || !type" id="consonant-details-content-error">
+  <div *ngIf="!name || !type" id="consonant-details-content-error">
     <p>Pas de données sur cette lettre..</p>
   </div>
 </ion-content>

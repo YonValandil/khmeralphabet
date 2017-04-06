@@ -8,11 +8,11 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class consonantDetailsPage {
 
-  letter: string;
+  name: string;
   type: number;
 
   constructor(public navCtrl: NavController, public params: NavParams) {
-    this.letter = this.params.get('letter');
+    this.name = this.params.get('name');
     this.type = this.params.get('type');
   }
 
