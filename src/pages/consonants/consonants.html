@@ -8,12 +8,20 @@
 </ion-header>
 
 <ion-content padding>
+  <div [ngStyle]="{'display': 'inline'}" *ngFor="let consonant of consonantsTab; let i = index">
     <button
-    *ngFor="let consonant of consonantsTab; let i = index"
     id="consonantDetailsButton"
-
     (tap)="showConsonantDetailsPage(consonant.name, consonant.type)"
-    ion-button round [color]="colorElemen">
+    *ngIf="consonant.type == 1" color="primary"
+    ion-button round>
       {{consonant.name}}
     </button>
+    <button
+    id="consonantDetailsButton"
+    (tap)="showConsonantDetailsPage(consonant.name, consonant.type)"
+    *ngIf="consonant.type == 2" color="danger"
+    ion-button round>
+      {{consonant.name}}
+    </button>
+  </div>
 </ion-content>

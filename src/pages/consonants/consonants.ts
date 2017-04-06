@@ -1,4 +1,4 @@
-import { Component, Directive, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
@@ -7,12 +7,8 @@ import { consonantDetailsPage } from '../consonantDetails/consonantDetails';
 @Component({
   selector: 'page-consonants',
   templateUrl: 'consonants.html',
-  inputs : ['color'],
 })
-export class ConsonantsPage implements OnInit {
-
-  hideElement: boolean;
-  colorElement: string;
+export class ConsonantsPage {
 
   consonantsTab = [
     { "id": 1, "name": 'Kor', "type": 2 },
@@ -60,22 +56,10 @@ export class ConsonantsPage implements OnInit {
 
   }
 
-  ngOnInit(){
-    console.log("OMGGGGGGGGGG !");
-    /*for (let consonant of this.consonantsTab) {
-      if(consonant.type == 2) { //change 2 to 1
-       this.colorElement = 'danger';
-      } else {
-       this.colorElement = 'primary';
-      }
-    }*/
-  }
-
   private showConsonantDetailsPage(name: string, type: number) {
     this.navCtrl.push(consonantDetailsPage, {
       name: name,
       type: type
     });
   }
-
 }
