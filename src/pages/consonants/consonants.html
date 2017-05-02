@@ -9,28 +9,30 @@
 
 <ion-content padding>
   <ion-grid>
-    <div [ngStyle]="{'display': 'inline'}" *ngFor="let consonant of consonantsTab; let i = index">
-       <ion-row>
-        <ion-col>
-          <button
-          id="consonantDetailsButton"
-          (tap)="showConsonantDetailsPage(consonant.name, consonant.type)"
-          *ngIf="consonant.type == 1" color="primary"
-          ion-button round small>
+    <ion-row>
+      <div *ngFor="let consonant of consonantsTab; let i = index">
+        <ion-col col-sm-1>
+          <ion-row>
+            <button
+            id="consonantDetailsButton"
+            (tap)="presentProfileModal(consonant.name, consonant.trad, consonant.type)"
+            *ngIf="consonant.type == 1" color="primary"
+            ion-button round small>
+              <span class="khmerpolice">{{consonant.name}}</span>
+            </button>
+            <button
+            id="consonantDetailsButton"
+            (tap)="showConsonantDetailsPage(consonant.name, consonant.trad, consonant.type)"
+            *ngIf="consonant.type == 2" color="danger"
+            ion-button round small>
             <span class="khmerpolice">{{consonant.name}}</span>
-          </button>
-          <button
-          id="consonantDetailsButton"
-          (tap)="showConsonantDetailsPage(consonant.name, consonant.type)"
-          *ngIf="consonant.type == 2" color="danger"
-          ion-button round small>
-          <span class="khmerpolice">{{consonant.name}}</span>
-          </button>
+            </button>
+          </ion-row>
+          <ion-row class="trad">
+            {{consonant.trad}}
+          </ion-row>
         </ion-col>
-        <ion-col>
-          {{consonant.trad}}
-        </ion-col>
-      </ion-row>
-    </div>
+      </div>
+    </ion-row>
   </ion-grid>
 </ion-content>

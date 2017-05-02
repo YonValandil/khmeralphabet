@@ -1,13 +1,24 @@
 page-consonants {
+  #consonantDetailsButton {
+    //padding-left:20px;
+    //padding-right:20px;
+    margin-left: 4px;
+    margin-right: 4px;
+    width: 30px;
+    height:32px;
+  }
 
-}
+  .khmerpolice {
+    font-family: "Kh Sophorth";
+    font-size: x-large;
+  }
 
-#consonantDetailsButton {
-  padding-left:20px;
-  padding-right:20px;
-}
+  .trad {
+    //text-align: center;
+    //vertical-align:middle;
+    transform: translateX(30%);
+    font-size: x-small;
+    //margin: auto;
+  }
 
-.khmerpolice {
-  font-family: "Kh Sophorth";
-  font-size: larger;
 }

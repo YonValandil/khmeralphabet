@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { ModalController, ViewController, NavParams, NavController } from 'ionic-angular';
 
 import { consonantDetailsPage } from '../consonantDetails/consonantDetails';
 
@@ -52,14 +52,25 @@ export class ConsonantsPage {
     { "id": 33, "name": 'អ', "trad": "Or", "type": 1 }
   ];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
   }
 
-  private showConsonantDetailsPage(name: string, type: number) {
+  private showConsonantDetailsPage(name: string, trad: string, type: number) {
     this.navCtrl.push(consonantDetailsPage, {
       name: name,
+      trad: trad,
       type: type
     });
   }
+
+  presentProfileModal(name: string, trad: string, type: number) {
+   let profileModal = this.modalCtrl.create(consonantDetailsPage, {
+     name: name,
+     trad: trad,
+     type: type
+   });
+   profileModal.present();
+ }
+
 }

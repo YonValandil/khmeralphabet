@@ -7,15 +7,16 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="sample-modal-page">
   <h2>Details de la consonnes</h2>
 
-  <div *ngIf="name && type" id="consonant-details-content">
-    <p>lettre : {{ name }}</p>
+  <div *ngIf="name && trad && type" id="consonant-details-content">
+    <p class="khmerpolice">lettre : {{ name }}</p>
+    <p>prononciation : {{ trad }}</p>
     <p>type : {{ (type == 1) ? 'Dur' : 'Soft' }}</p>
   </div>
 
-  <div *ngIf="!name || !type" id="consonant-details-content-error">
+  <div *ngIf="!name || !trad || !type" id="consonant-details-content-error">
     <p>Pas de données sur cette lettre..</p>
   </div>
 </ion-content>
